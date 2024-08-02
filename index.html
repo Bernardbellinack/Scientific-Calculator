@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="display" id="display">0</div>
+        <div class="buttons">
+            <!-- Basic Operations -->
+            <div class="button clear" onclick="clearDisplay()">C</div>
+            <div class="button" onclick="appendToDisplay('7')">7</div>
+            <div class="button" onclick="appendToDisplay('8')">8</div>
+            <div class="button" onclick="appendToDisplay('9')">9</div>
+            <div class="button" onclick="appendToDisplay('/')">/</div>
+            <div class="button" onclick="appendToDisplay('4')">4</div>
+            <div class="button" onclick="appendToDisplay('5')">5</div>
+            <div class="button" onclick="appendToDisplay('6')">6</div>
+            <div class="button" onclick="appendToDisplay('*')">*</div>
+            <div class="button" onclick="appendToDisplay('1')">1</div>
+            <div class="button" onclick="appendToDisplay('2')">2</div>
+            <div class="button" onclick="appendToDisplay('3')">3</div>
+            <div class="button" onclick="appendToDisplay('-')">-</div>
+            <div class="button" onclick="appendToDisplay('0')">0</div>
+            <div class="button" onclick="appendToDisplay('.')">.</div>
+            <div class="button" onclick="appendToDisplay('+')">+</div>
+            <div class="button equal" onclick="calculateResult()">=</div>
+
+            <!-- Advanced Functions -->
+            <div class="button" onclick="calculateScientific('sqrt')">√</div>
+            <div class="button" onclick="calculateScientific('cbrt')">∛</div>
+            <div class="button" onclick="calculateScientific('pow')">x^y</div>
+            <div class="button" onclick="calculateScientific('factorial')">x!</div>
+            <div class="button" onclick="calculateScientific('log')">log</div>
+            <div class="button" onclick="calculateScientific('ln')">ln</div>
+            <div class="button" onclick="calculateScientific('exp')">e^x</div>
+            <div class="button" onclick="calculateScientific('sin')">sin</div>
+            <div class="button" onclick="calculateScientific('cos')">cos</div>
+            <div class="button" onclick="calculateScientific('tan')">tan</div>
+            <div class="button" onclick="calculateScientific('asin')">asin</div>
+            <div class="button" onclick="calculateScientific('acos')">acos</div>
+            <div class="button" onclick="calculateScientific('atan')">atan</div>
+            <div class="button" onclick="calculateScientific('sinh')">sinh</div>
+            <div class="button" onclick="calculateScientific('cosh')">cosh</div>
+            <div class="button" onclick="calculateScientific('tanh')">tanh</div>
+            <div class="button" onclick="calculateScientific('asinh')">asinh</div>
+            <div class="button" onclick="calculateScientific('acosh')">acosh</div>
+            <div class="button" onclick="calculateScientific('atanh')">atanh</div>
+            <div class="button" onclick="degreesToRadians()">Deg to Rad</div>
+            <div class="button" onclick="radiansToDegrees()">Rad to Deg</div>
+            <div class="button" onclick="calculateCombination()">nCr</div>
+            <div class="button" onclick="calculatePermutation()">nPr</div>
+            <div class="button" onclick="generateRandomNumber()">Rnd</div>
+            <div class="button" onclick="matrixOperation()">Matrix</div>
+            <div class="button" onclick="complexOperation()">Complex</div>
+            <div class="button" onclick="summation()">Σ</div>
+            <div class="button" onclick="integration()">∫</div>
+        </div>
+        <div class="footer">
+            <div class="footer-text">Project by <span class="developer">Siegfried Bernard INAACK BELL</span></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

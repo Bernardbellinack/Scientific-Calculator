@@ -1,0 +1,156 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+    height: 100vh;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    width: 90%; /* Responsive width */
+    max-width: 360px; /* Maximum width */
+    height: 90%; /* Responsive height */
+    max-height: 540px; /* Maximum height */
+    margin: 10px; /* Margin for small screens */
+    background: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    position: relative; /* Added for positioning the footer */
+}
+
+.display {
+    background: #333;
+    color: #fff;
+    font-size: 1.5rem; /* Reduced font size */
+    padding: 20px; /* Reduced padding */
+    text-align: right;
+    overflow-x: auto;
+    box-sizing: border-box;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.button {
+    flex: 1 0 25%;
+    background: #444;
+    color: #fff;
+    border: 1px solid #555;
+    padding: 10px; /* Reduced padding */
+    text-align: center;
+    font-size: 1rem; /* Adjusted font size */
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.button:hover {
+    background: #555;
+}
+
+.button:active {
+    background: #666;
+    transform: scale(0.95);
+}
+
+.clear {
+    flex: 1 0 100%;
+    background: #e74c3c;
+}
+
+.equal {
+    flex: 1 0 100%;
+    background: #27ae60;
+}
+
+/* Footer Styles */
+.footer {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 20px); /* Ensure the footer fits within the calculator */
+    text-align: center;
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+.footer-text {
+    position: absolute;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.developer {
+    font-weight: bold;
+}
+
+/* Animation for Footer Text */
+@keyframes move {
+    0% {
+        transform: transitionX(100%);
+    }
+    50% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.footer-text {
+    margin-top: -1rem;
+    color: white;
+    font-size: larger;
+    animation: move 10s linear infinite;
+    font-size: 15px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .button {
+        font-size: 0.9rem; /* Further adjusted for tablets */
+        padding: 8px;
+    }
+
+    .display {
+        font-size: 1.2rem;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .button {
+        font-size: 0.8rem; /* Adjusted for smaller screens */
+        padding: 6px;
+    }
+
+    .display {
+        font-size: 1rem;
+        padding: 6px;
+    }
+}
+
+@media (max-width: 320px) {
+    .button {
+        font-size: 0.7rem; /* Smallest screen adjustments */
+        padding: 4px;
+    }
+
+    .display {
+        font-size: 0.9rem;
+        padding: 4px;
+    }
+}
